@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<body>
+  <title>Spoofly Webplayer</title>
+
+</body>
+<!-- There is several things I need to do including:
+Add Playlists:
+Make Cards Dragable meaning they want the songs on top it only works for them.
+-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/amplitudejs@5.3.0/dist/amplitude.min.js"></script>
+<script>
+
+  Arr = ['MUSIC/Deathbed.mp3', 'MUSIC/rave.mp3','MUSIC/gigachad.mp3', 'MUSIC/TrapAnthem.mp3', 'MUSIC/dreamdis.mp3', 'MUSIC/evilmorty.mp3', 'MUSIC/despacito.mp3']
+  function getSong(x) {
+    document.getElementById('musicPlayer').setAttribute('src', Arr[x])
+    let song = Arr[x];
+
+  }
+
+  function repeatSong() { Amplitude.setRepeatSong(); }
+    imgs = ['IMGS/Deathbed.png', 'IMGS/rave.png', 'IMGS/gigachad.png', 'IMGS/TrapAnthem.png', 'IMGS/dreamdis.png', 'IMGS/evilmorty.png', 'IMGS/Despacito.png']
+function pictureChange(x)
+{
+document.getElementById("theImage").setAttribute('src', imgs[x])
+}
+
+function TextChangeDespacito()
+{
+  document.getElementById('h1_id').innerHTML = 'Despacito';
+
+}
+function TextChangeDespacito4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: Justin Bieber Luis Fonsi Ft. Daddy Yankee';
+
+}
+
+function TextChangeEvilmorty()
+{
+  document.getElementById('h1_id').innerHTML = 'Evil Morty Theme';
+
+}
+function TextChangeEvilmorty4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: Rick and Morty';
+
+}
+function TextChangeDeathBed()
+{
+  document.getElementById('h1_id').innerHTML = 'Deathbed';
+
+}
+function TextChangeTrap()
+{
+  document.getElementById('h1_id').innerHTML = 'Trap Anthem';
+
+}
+function TextChangeRave()
+{
+  document.getElementById('h1_id').innerHTML = 'Rave';
+
+}
+function TextChangeGiga()
+{
+  document.getElementById('h1_id').innerHTML = 'GigaChad Theme (Phonk House Version)';
+
+}
+function TextChangeDream()
+{
+  document.getElementById('h1_id').innerHTML = 'Dream Distrack';
+
+}
+function TextChangeDeathBed3()
+{
+  document.getElementById('h2_id').innerHTML = 'By: Powfu, beabadoobee';
+
+}
+function TextChangeRave4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: Dxrk';
+
+}
+function TextChangeGiga4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: g3ox_em';
+
+}
+function TextChangeDream4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: Quandle Dingle';
+
+}
+function TextChangeTrap4()
+{
+  document.getElementById('h2_id').innerHTML = 'By: MCVirgins, YumHead';
+
+}
+</script>
+
+
+
+
+
+
+	
+	
+</div>
+
+
+<body>
+    <link rel="stylesheet" href="style.css" />
+<img style="position:fixed;bottom:0;" class="theImage" id="theImage" src="" />
+<style>
+.theImage{
+  height: 100px;
+    width: 125px;
+}
+
+
+
+</style>
+</body>
+<!-- In Your Html Code -->
+<!-- Create a music element -->
+
+</div>
+</body>
+<!--Make sure not to put anything in the scr-->
+
+<!-- Create a few buttons -->
+
+
+<!-- I hope this was helpful! -->
+
+<div class="audio-player">
+  <audio id="musicPlayer" controls autoplay>
+  
+  <source src="" type="audio/mp3">
+</div> 
+</audio>
+<p id="h1_id"><b></b></p>
+<p1 id="h2_id"><b></b></p1>
+  <div class="PlayImg">
+    <img class="fixed" id="theImage" src=""/>
+  </div>
+
+<button class="Loop" onclick="enableLoop()" type="button">Enable loop</button>
+<button class="UnLoop" onclick="disableLoop()" type="button">Disable loop</button>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 15%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+h4, h6 {
+  text-align: center;
+}
+.button2 {
+  margin-top: 100px; 
+  margin: 0px;
+  right: 50%;
+}
+</style>
+</head>
+<body>
+
+<center>
+  <br>
+  <br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/Deathbed.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>DeathBed</b></h4> 
+      <h6>By: Powfu, beabadoobee</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(0); pictureChange(0); TextChangeDeathBed(); TextChangeDeathBed3();">Play Now</button></center>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/rave.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Rave</b></h4> 
+      <h6>By: Dxrk</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(1); pictureChange(1); TextChangeRave(); TextChangeRave4();">Play Now</button></center>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/gigachad.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Gigachad Theme (Phonk Theme Song)</b></h4> 
+      <h6>By: g3ox_em</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(2); pictureChange(2); TextChangeGiga(); TextChangeGiga4();">Play Now</button></center>
+    </div>
+  </div>
+</div>
+<br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/TrapAnthem.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Trap Anthem</b></h4> 
+      <h6>By: Yum Head, MCVirgins</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(3); pictureChange(3); TextChangeTrap(); TextChangeTrap4();">Play Now</button></center>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="a">
+  <div class="card">
+    <img src="IMGS/dreamdis.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Dream Distrack</b></h4> 
+      <h6>By: QuandleDingle</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(4); pictureChange(4); TextChangeDream(); TextChangeDream4();">Play Now</button></center>
+    </div>
+  </div>
+</div>
+<br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/evilmorty.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Evil Morty</b></h4> 
+      <h6>By: Rick And Morty</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(5); pictureChange(5); TextChangeEvilmorty(); TextChangeEvilmorty4();">Play Now</button></center>
+    </div>
+  </div>
+</div>
+<br>
+<div class="a">
+  <div class="card">
+    <img src="IMGS/Despacito.png" alt="Img" style="width:25%;float:none;">
+    <div class="container">
+      <h4><b>Despacito</b></h4> 
+      <h6>By: Justin Bieber Luis Fonsi Ft. Daddy Yankee</h6> 
+      <div class="button2">
+        <center><button onclick="getSong(6); pictureChange(6); TextChangeDespacito(); TextChangeDespacito4();">Play Now</button></center>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+<br>
+<br>
+<br>
+</center>
+
+<style>
+.middle {
+  margin: 0 auto;
+}
+</style>
+
+<script>
+
+    var x = document.getElementById('a')    
+
+    for(var n=0; n<x.children.length; n++) {
+        ;(function(c) {
+            c.addEventListener('mousedown', function(e) {
+                console.log('dragstart')
+                this.style.opacity = '.9'
+                this.style.position = 'relative'
+
+                if(c.style.top === "") {
+                    var offsetStart = 0
+                } else {
+                    var offsetStart = parseInt(c.style.top.slice(0,-2))
+                }
+
+                var mouseStart = e.pageY
+                var mousemoveHandler;
+                document.addEventListener('mousemove', mousemoveHandler  = function(e) {
+                    //this.style.opacity -= '.01'
+                    c.style.top = offsetStart + e.pageY - mouseStart
+                    console.log('drag: ', e.pageY, mouseStart, c.style.top)
+                })
+                document.addEventListener('mouseup', function(e) {
+                    console.log('dragend')
+                    document.removeEventListener('mousemove', mousemoveHandler)
+                })
+            })
+        })(x.children[n])
+    }
+
+
+var x = document.getElementById("musicPlayer");
+
+function enableLoop() { 
+  x.loop = true;
+} 
+
+function disableLoop() { 
+  x.loop = false;
+} 
+
+function checkLoop() { 
+  alert(x.loop);
+} 
+</script> 
+<style>
+.PlayImg {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.fixed{
+    position:fixed;
+}
+img{
+  width: 15%;
+  height: 15%;
+  float: left;
+}
+.newdiv {
+  height: 200px;
+  width: 50%;
+  float: left;
+}
+body {
+    margin: 0px;
+}
+.audio-player {
+  position:fixed;
+    bottom:0px;
+    left:42%;
+
+}
+.Loop {
+  position:fixed;
+    bottom:30px;
+    right:500px;
+}
+.UnLoop {
+  position:fixed;
+    bottom:10px;
+    right:500px;
+}
+p1 {
+  text-align: left;
+  bottom: 10px;
+  position: fixed;
+  left: 10%;
+}
+p {
+  text-align: left;
+  bottom: 20px;
+  position: fixed;
+  left: 10%;
+}
+
+</style>
+
+
+
+
